@@ -1,0 +1,174 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".MainActivity\">\r\n\r\n\r\n    <TabHost\r\n        android:id=\"@+id/tbhConversor\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TabWidget\r\n                android:id=\"@android:id/tabs\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\" />\r\n\r\n            <FrameLayout\r\n                android:id=\"@android:id/tabcontent\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\">\r\n\r\n                <RelativeLayout\r\n                    android:id=\"@+id/Longitud\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:orientation=\"vertical\">\r\n                    <TextView\r\n                        android:id=\"@+id/lbldelongitud\"\r\n                        android:text=\"DE:\"\r\n                        android:layout_marginTop=\"60dp\"\r\n                        android:layout_marginLeft=\"20dp\"\r\n                        android:layout_width=\"wrap_content\"\r\n                        android:layout_height=\"wrap_content\"/>\r\n                    <TextView\r\n                        android:id=\"@+id/lblAlongitud\"\r\n                        android:text=\"A:\"\r\n                        android:layout_marginTop=\"120dp\"\r\n                        android:layout_marginLeft=\"20dp\"\r\n                        android:layout_width=\"wrap_content\"\r\n                        android:layout_height=\"wrap_content\"/>\r\n                    <Spinner\r\n                        android:id=\"@+id/spnDelongitud\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_marginTop=\"60dp\"\r\n                        android:layout_marginLeft=\"60dp\"\r\n                        android:entries=\"@array/spnLongitud\"/>\r\n\r\n                    <Spinner\r\n                        android:id=\"@+id/spnAlongitud\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_marginTop=\"120dp\"\r\n                        android:layout_marginLeft=\"60dp\"\r\n                        android:entries=\"@array/spnLongitud\"/>\r\n\r\n                    <EditText\r\n                        android:id=\"@+id/txtCantidadLongitud\"\r\n                        android:layout_below=\"@+id/spnAlongitud\"\r\n                        android:layout_marginTop=\"40dp\"\r\n                        android:hint=\"Cantidad a convertir\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"/>\r\n                    <Button\r\n                        android:id=\"@+id/btnConvertirLongitud\"\r\n                        android:layout_below=\"@+id/txtCantidadLongitud\"\r\n                        android:layout_marginTop=\"40dp\"\r\n                        android:text=\"convertir\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"/>\r\n\r\n                </RelativeLayout>\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/Almacenamiento\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:orientation=\"vertical\">\r\n\r\n                </LinearLayout>\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/monedas\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:orientation=\"vertical\">\r\n\r\n                </LinearLayout>\r\n            </FrameLayout>\r\n        </LinearLayout>\r\n    </TabHost>\r\n</RelativeLayout>
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	
++++ b/app/src/main/res/layout/activity_main.xml	
+@@ -8,7 +8,7 @@
+ 
+ 
+     <TabHost
+-        android:id="@+id/tbhConversor"
++        android:id="@+id/tbhConversordeArea"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+ 
+@@ -28,50 +28,51 @@
+                 android:layout_height="match_parent">
+ 
+                 <RelativeLayout
+-                    android:id="@+id/Longitud"
++                    android:id="@+id/Area"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
+                     <TextView
+-                        android:id="@+id/lbldelongitud"
++                        android:id="@+id/lbldeArea"
+                         android:text="DE:"
+                         android:layout_marginTop="60dp"
+                         android:layout_marginLeft="20dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <TextView
+-                        android:id="@+id/lblAlongitud"
++                        android:id="@+id/lblArea"
+                         android:text="A:"
+                         android:layout_marginTop="120dp"
+                         android:layout_marginLeft="20dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <Spinner
+-                        android:id="@+id/spnDelongitud"
++                        android:id="@+id/spnDeArea"
++                        android:layout_alignBaseline="@+idlblLongitud"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="60dp"
+                         android:layout_marginLeft="60dp"
+-                        android:entries="@array/spnLongitud"/>
++                        android:entries="@array/spnDeArea"/>
+ 
+                     <Spinner
+-                        android:id="@+id/spnAlongitud"
++                        android:id="@+id/spnAArea"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="120dp"
+                         android:layout_marginLeft="60dp"
+-                        android:entries="@array/spnLongitud"/>
++                        android:entries="@array/spnAArea"/>
+ 
+                     <EditText
+-                        android:id="@+id/txtCantidadLongitud"
+-                        android:layout_below="@+id/spnAlongitud"
++                        android:id="@+id/txtCantidadArea"
++                        android:layout_below="@+id/spnAArea"
+                         android:layout_marginTop="40dp"
+                         android:hint="Cantidad a convertir"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"/>
+                     <Button
+-                        android:id="@+id/btnConvertirLongitud"
+-                        android:layout_below="@+id/txtCantidadLongitud"
++                        android:id="@+id/btnConvertirArea"
++                        android:layout_below="@+id/txtCantidadArea"
+                         android:layout_marginTop="40dp"
+                         android:text="convertir"
+                         android:layout_width="match_parent"
+@@ -79,21 +80,6 @@
+ 
+                 </RelativeLayout>
+ 
+-                <LinearLayout
+-                    android:id="@+id/Almacenamiento"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:orientation="vertical">
+-
+-                </LinearLayout>
+-
+-                <LinearLayout
+-                    android:id="@+id/monedas"
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:orientation="vertical">
+-
+-                </LinearLayout>
+             </FrameLayout>
+         </LinearLayout>
+     </TabHost>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Conversores</string>\r\n    <string-array name=\"spnLongitud\">\r\n        <item>Metros</item>\r\n        <item>Centimetros</item>\r\n        <item>pulgadas</item>\r\n        <item>pie</item>\r\n        <item>vara</item>\r\n        <item>yarda</item>\r\n        <item>Km</item>\r\n        <item>Milla</item>\r\n    </string-array>\r\n\r\n</resources>
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	
++++ b/app/src/main/res/values/strings.xml	
+@@ -1,14 +1,12 @@
+ <resources>
+-    <string name="app_name">Conversores</string>
+     <string-array name="spnLongitud">
+-        <item>Metros</item>
+-        <item>Centimetros</item>
+-        <item>pulgadas</item>
+-        <item>pie</item>
+-        <item>vara</item>
+-        <item>yarda</item>
+-        <item>Km</item>
+-        <item>Milla</item>
++        <item>Pie_Cuadrado</item>
++        <item>Vara_Cuadrada</item>
++        <item>Yarda_Cuadrada</item>
++        <item>Metro_Cuadrado</item>
++        <item>Tareas</item>
++        <item>Manzana</item>
++        <item>Héctaras</item>
++
+     </string-array>
+-
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/com/ugb/controlesbasicosugb/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ugb.controlesbasicosugb;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.RadioGroup;\r\nimport android.widget.Spinner;\r\nimport android.widget.TabHost;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n    TabHost tbh;\r\n    TextView tempVal;\r\n    Spinner spn;\r\n    conversores miObj = new conversores();\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        tbh = findViewById(R.id.tbhConversor);\r\n        tbh.setup();\r\n\r\n        tbh.addTab(tbh.newTabSpec( \"LON\")).setContent(R.id.Longitud).setIndicator( \"LONGITUD\",  null);\r\n        tbh.addTab(tbh.newTabSpec( \"ALM\")).setContent(R.id.Almacenamiento).setIndicator(\"ALMACENAMIENTO\",  null);\r\n        tbh.addTab(tbh.newTabSpec( \"MON\")).setContent(R.id.monedas).setIndicator(\"MONEDAS\",  null);\r\n        btn =findViewById(R.id.btnConvertirLongitud);\r\n\r\n        btn.setOnclickListener(  new View.OnClickListener(){\r\n            @Override\r\n                    public void onClick(View view){\r\n                spn = findViewById(R.id.spnDelongitud);\r\n                int de = spn.getSelectedItemPosition();\r\n\r\n                spn = findViewById(R.id.spnAlongitud);\r\n                int a = spn.getSelectedItemPosition();\r\n\r\n                tempVal = findViewById(R.id.txtCantidadLongitud);\r\n                double cantidad = Double.parseDouble(tempVal.getText().toString());\r\n\r\n                double resp = miObj.convertir((0, de, a, cantidad);\r\n                Toast.makeText(getApplicationContext(), \"Respuesta: \" + resp, Toast.LENGTH_LONG).show();\r\n\r\n            }\r\n        }\r\n    }\r\n}\r\nclass conversores{\r\n    double[][] valores={\r\n            {1,100, 29.3701, 3.28084, 1.193, 1.09361, 0.001, 0.000621371},\r\n            {1},\r\n            {1}\r\n    };\r\n    public double convertir(int opcion, int de, int a, double cantidad){\r\n        return valores[opcion][a]/valores[opcion][de]*cantidad;\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/ugb/controlesbasicosugb/MainActivity.java b/app/src/main/java/com/ugb/controlesbasicosugb/MainActivity.java
+--- a/app/src/main/java/com/ugb/controlesbasicosugb/MainActivity.java	
++++ b/app/src/main/java/com/ugb/controlesbasicosugb/MainActivity.java	
+@@ -33,27 +33,22 @@
+         btn.setOnclickListener(  new View.OnClickListener(){
+             @Override
+                     public void onClick(View view){
+-                spn = findViewById(R.id.spnDelongitud);
++                spn = findViewById(R.id.spnDeArea);
+                 int de = spn.getSelectedItemPosition();
+ 
+-                spn = findViewById(R.id.spnAlongitud);
++                spn = findViewById(R.id.spnAArea);
+                 int a = spn.getSelectedItemPosition();
+ 
+-                tempVal = findViewById(R.id.txtCantidadLongitud);
++                tempVal = findViewById(R.id.txtCantidadArea);
+                 double cantidad = Double.parseDouble(tempVal.getText().toString());
+ 
+                 double resp = miObj.convertir((0, de, a, cantidad);
+                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+ 
+             }
+-        }
+-    }
+-}
+-class conversores{
++class conversoresArea{
+     double[][] valores={
+             {1,100, 29.3701, 3.28084, 1.193, 1.09361, 0.001, 0.000621371},
+-            {1},
+-            {1}
+     };
+     public double convertir(int opcion, int de, int a, double cantidad){
+         return valores[opcion][a]/valores[opcion][de]*cantidad;
