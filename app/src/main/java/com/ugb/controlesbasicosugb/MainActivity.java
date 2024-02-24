@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         tbh = findViewById(R.id.tbhParcial);
         tbh.setup();
 
-        tbh.addTab(tbh.newTabSpec( "AGU")).setContent(R.id.ValorAgua).setIndicator( "Agua",  null));
-        tbh.addTab(tbh.newTabSpec( "ARE")).setContent(R.id.tabArea).setIndicator("AREA",  null));
+        tbh.addTab(tbh.newTabSpec( "AGU")).setContent(R.id.ValorAgua).setIndicator( "Agua",  null);
+        tbh.addTab(tbh.newTabSpec( "ARE")).setContent(R.id.tabArea).setIndicator("AREA",  null);
 
         btnArea =findViewById(R.id.btnConvertirArea);
         btnArea.setOnClickListener(new View.OnClickListener() {
