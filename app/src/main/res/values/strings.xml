@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">conversores</string>
+    <string name="app_name">coversores</string>
     <string-array name="spnArea">
         <item>Metro Cuadrado</item>
         <item>Vara Cuadrada</item>
