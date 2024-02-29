@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Conversores</string>
+    <string name="app_name">AgendaAmigosSqlite</string>
     <string-array name="spnLongitud">
 
     </string-array>
