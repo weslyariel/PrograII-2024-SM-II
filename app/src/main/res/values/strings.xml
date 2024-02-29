@@ -1,14 +1,7 @@
 <resources>
     <string name="app_name">Conversores</string>
     <string-array name="spnLongitud">
-        <item>Metros</item>
-        <item>Centimetros</item>
-        <item>pulgadas</item>
-        <item>pie</item>
-        <item>vara</item>
-        <item>yarda</item>
-        <item>Km</item>
-        <item>Milla</item>
+
     </string-array>
 
 </resources>
