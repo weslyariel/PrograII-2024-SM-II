@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DB extends SQLiteOpenHelper {
     private static final String dbname="Amigos";
     private static final int v=1;
-    private static final String SQLdb = "CREATE TABLE amigos (idAmigo int primary key autoincrement, Nombre text, Dirección text, Telefono text," +
+    private static final String SQLdb = "CREATE TABLE amigos (idAmigo integer primary key autoincrement, Nombre text, Dirección text, Telefono text," +
             "Email text, Dui text)";
 
     public DB(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -16,7 +16,7 @@ public class DB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        sqLiteDatabase.execSQL(SQLdb);
+        db.execSQL(SQLdb);
     }
 
     @Override
