@@ -19,7 +19,7 @@
 
     <EditText
         android:id="@+id/txtNombre"
-        android:hint="Nombre"
+        android:hint="Codigo"
         android:layout_below="@+id/btnImgAmigo"
         android:inputType="textPersonName"
         android:layout_marginTop="40dp"
@@ -28,7 +28,7 @@
 
     <EditText
         android:id="@+id/txtdireccion"
-        android:hint="Direccion"
+        android:hint="Descripción"
         android:inputType="textMultiLine"
         android:layout_below="@id/txtNombre"
         android:layout_marginTop="40dp"
@@ -37,8 +37,8 @@
 
     <EditText
         android:id="@+id/txtTelefono"
-        android:hint="Telefono"
-        android:inputType="phone"
+        android:hint="Marca"
+        android:inputType="textMultiLine"
         android:layout_below="@id/txtdireccion"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
@@ -46,8 +46,8 @@
 
     <EditText
         android:id="@+id/txtEmail"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:hint="Presentación"
+        android:inputType="textMultiLine"
         android:layout_below="@id/txtTelefono"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
@@ -55,8 +55,8 @@
 
     <EditText
         android:id="@+id/txtDui"
-        android:hint="Dui"
-        android:inputType="number"
+        android:hint="Precio"
+        android:inputType="textMultiLine"
         android:layout_below="@id/txtEmail"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
 
     <Button
         android:id="@+id/btnGuardarAmigo"
-        android:text="Guardar Amigo"
+        android:text="Guardar Producto"
         android:layout_width="match_parent"
         android:layout_below="@id/txtDui"
         android:layout_marginTop="40dp"
