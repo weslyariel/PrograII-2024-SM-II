@@ -31,13 +31,12 @@ public class DB extends SQLiteOpenHelper {
         try {
             SQLiteDatabase db = getWritableDatabase();
             String sql = "";
-            if (accion == ("nuevo")) {
+            if (accion.equals ("nuevo")) {
                 sql = "INSERT INTO Amigos (Nombre, Direccion, Telefono, Email, Dui, Foto) Values ('" + datos[1] + "','" + datos[2] + "', '" + datos[3] + "', '" + datos[4] + "', '" + datos[5] + "', '" + datos[6] + "')";
-            } else if (accion == "modificar") {
-                sql = "UPDATE Amigos Set Nombre='" + datos[1] + "',Direccion='" + datos[2] + "',Telefono='" + datos[3] + "',Email='" + datos[4] + "',Dui='" + datos[5], Foto = '" + datos[6] + "'
-                WHERE IdAmigos '" + datos[0] + "' ";
+            } else if (accion.equals("modificar")) {
+                sql = "UPDATE Amigos Set Nombre='" + datos[1] + "',Direccion='" + datos[2] + "',Telefono='" + datos[3] + "',Email='" + datos[4] + "',Dui='" + datos[5] + "', Foto= '" + datos[6] + "' WHERE IdAmigos= '" + datos[0] + "' ";
 
-            } else if (accion == "eliminar") {
+            } else if (accion.equals("eliminar")) {
                 sql = "DELETE FROM Amigos WHERE IdAmigos'" + datos[0] + "'";
             }
             db.execSQL(sql);
@@ -46,11 +45,12 @@ public class DB extends SQLiteOpenHelper {
             return e.getMessage();
         }
 
+        }
+
         public Cursor consultar_amigos() {
             SQLiteDatabase db = getReadableDatabase();
             Cursor cursor = db.rawQuery("SELECT * FROM amigos ORDER BY Nombre", null);
             return cursor;
         }
     }
-}
 
